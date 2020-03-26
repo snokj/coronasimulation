@@ -1,0 +1,30 @@
+Forbedringsnotater:
+
+--------------------------------------------
+NORMALISER REISERATER:
+--------------------------------------------
+Normaliser reiserater til landstørrelse slik at flytting ikke fører til utjevning av folketall.
+
+--------------------------------------------
+IMPLEMENTER MULIGHET FOR ULIKE SMITTEVERNTILTAK I ULIKE LAND:
+--------------------------------------------
+Mulighet til å oppgi smitteverntiltak ved konstruksjon av ArbitraryWorld
+
+Class ControlMeasureParameters
+    bool UseInfectionPercentage
+        double? ControlMeasureStartInfectionLevel
+    bool UseRateOfChangeInfection
+        double? ControlMeasureStartRateOfChange
+        double? ControlMeasureEndRateOfChange
+    
+    int? ReduceEncountersPerDayTo
+    double? ReduceInfectionRateTo
+
+    //Semi-major implementation changes to move
+    bool DisallowTravel
+    //Semi-major implementation changes to move
+    bool DisallowEntryForSickPersons
+    bool CheckIncubationAtEntry
+    double FalseNegativeChanceIncubationAtEntry
+    double FalsePositiveChanceIncubationAtEntry
+    
